@@ -1,16 +1,16 @@
 import { Flex, Box, Stack, Skeleton, Heading } from '@chakra-ui/react';
 import { Helmet } from 'react-helmet';
 
-export function Pool() {
+export function Market() {
   //const { id } = useParams();
 
   return (
     <>
       <Helmet>
-        <title>Pool</title>
-        <meta name="description" content="Pool" />
+        <title>Market</title>
+        <meta name="description" content="Market" />
       </Helmet>
-      <Flex position="relative" flex="1">
+      <Flex height="100%" position="relative" alignItems="center" justifyContent="center" flex="1">
         <Box
           position="absolute"
           px="3"
