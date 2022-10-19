@@ -1,4 +1,3 @@
-export const address = '0x3F3bF000B75e0134Eda62BAf3C6D5f48D2CAEe87';
 export const abi = [
   'constructor()',
   'function allRoundDataShouldRevert() view returns (bool)',
@@ -15,7 +14,6 @@ export const abi = [
   'function setAllRoundDataShouldRevert(bool _shouldRevert)',
   'function setDecimals(uint8 _decimals)',
   'function setLatestAnswer(int256 answer, uint256 timestamp)',
-  'function setLatestAnswerCurrent(int256 answer)',
   'function setLatestAnswerWithRound(int256 answer, uint256 timestamp, uint80 _roundId)',
   'function setLatestRoundDataShouldRevert(bool _shouldRevert)',
 ];
