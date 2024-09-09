@@ -2,7 +2,6 @@ module.exports = {
   env: {
     es6: true,
     node: true,
-    jest: true,
   },
   extends: ['plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
@@ -44,65 +43,4 @@ module.exports = {
       },
     },
   },
-
-  overrides: [
-    {
-      files: [
-        'liquidity/ui/**/*',
-        'liquidity/components/**/*',
-        'liquidity/lib/**/*',
-        'theme/**/*',
-        'oracle-manager/ui/**/*',
-        'governance/ui/**/*',
-        'ultrasound/ui/**/*',
-      ],
-
-      env: {
-        browser: true,
-      },
-
-      extends: ['plugin:react/recommended', 'plugin:@tanstack/eslint-plugin-query/recommended'],
-      plugins: ['react', 'react-hooks', '@tanstack/query'],
-
-      settings: {
-        react: {
-          version: '18.2.0',
-        },
-      },
-
-      globals: {
-        React: true,
-      },
-
-      rules: {
-        quotes: 'off',
-        'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
-        'react/prop-types': 'off', // using ts
-        'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'error',
-        '@tanstack/query/exhaustive-deps': 'off', // not smart enough, does not take into account `enabled` and global imports
-      },
-    },
-
-    {
-      files: [
-        '**/cypress/**/*.js',
-        '**/*.cy.js',
-        '**/*.cy.ts',
-        '**/*.cy.tsx',
-        '**/*.e2e.js',
-        '**/*.e2e.ts',
-        '**/*.e2e.tsx',
-      ],
-      env: {
-        mocha: true,
-      },
-      globals: {
-        cy: true,
-        Cypress: true,
-        expect: true,
-      },
-      rules: {},
-    },
-  ],
 };
